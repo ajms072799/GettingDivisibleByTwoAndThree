@@ -22,6 +22,9 @@ namespace DivisibleByTwoAndThreeApp
             string username = Console.ReadLine(); // after the input of the user name it will store in the username variable.
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("Hello " + username + ", Welcome! to my Application."); // Displaying the name of the user
+            Console.Write("Now enter a number that you want to know if is divisible by 2 or 3: "); // Getting the number of user 
+            int userInputNumber = Int32.Parse(Console.ReadLine()); // Storing the number the user provided.
             
             // <~ End of the Getting The Divisible by 2 and 3 App
             Console.ReadLine();
