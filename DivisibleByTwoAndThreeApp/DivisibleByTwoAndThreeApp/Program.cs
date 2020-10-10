@@ -31,6 +31,10 @@ namespace DivisibleByTwoAndThreeApp
         {
             // Getting the divisible by 2 and 3 application
 
+            int numberOfTransaction, i;
+            i = 0;
+            numberOfTransaction = 1;
+
             // Header of the application
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("--------------------------------------------------");
@@ -42,12 +46,27 @@ namespace DivisibleByTwoAndThreeApp
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("Hello " + username + ", Welcome! to my Application."); // Displaying the name of the user
-            Console.Write("Now enter a number that you want to know if is divisible by 2 or 3: "); // Getting the number of user 
-            int userInputNumber = Int32.Parse(Console.ReadLine()); // Storing the number the user provided.
 
-            // Displaying the result of inputed number.
-            GettingTheDivisibleOfTheNumber(userInputNumber); // method of getting the divisible.
-            
+            do
+            {
+                Console.Write("Now enter a number that you want to know if is divisible by 2 or 3: "); // Getting the number of user 
+                int userInputNumber = Int32.Parse(Console.ReadLine()); // Storing the number the user provided.
+
+                // Displaying the result of inputed number.
+                GettingTheDivisibleOfTheNumber(userInputNumber); // method of getting the divisible.
+
+                Console.Write("Do you want another transaction?(y/n) "); // Asking the user if he need's another trasaction.
+                char answerForAnotherTransac = Convert.ToChar(Console.ReadLine()); // getting the user answer and store in this variable
+
+                if (answerForAnotherTransac == 'y') // if the variable is equal to y.
+                {
+                    numberOfTransaction = numberOfTransaction + 1; // The number transaction will add another 1 it will be 2
+                }
+                else {
+                    Console.WriteLine("Thank you! " + username + " for using my Application."); // if the user not need another trasaction it will be end in this.
+                }
+                i++; // increament if the user need an another transaction.
+            } while (i < numberOfTransaction); // This is the do while condition.
             // <~ End of the Getting The Divisible by 2 and 3 App
             Console.ReadLine();
         }
