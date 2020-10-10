@@ -8,6 +8,25 @@ namespace DivisibleByTwoAndThreeApp
 {
     class Program
     {
+        static void GettingTheDivisibleOfTheNumber(int userInputNumber)
+        {
+            if (userInputNumber % 2 == 0 && userInputNumber % 3 == 0)
+            {
+                Console.WriteLine(userInputNumber + " is divisible by 2 and 3!");
+            }
+            else if (userInputNumber % 2 == 0)
+            {
+                Console.WriteLine(userInputNumber + " is divisible by 2 not by 3");
+            }
+            else if (userInputNumber % 3 == 0)
+            {
+                Console.WriteLine(userInputNumber + " is divisible by 3 not by 2");
+            }
+            else
+            {
+                Console.WriteLine(userInputNumber + " is not divisible by 2 or 3");
+            }
+        }
         static void Main(string[] args)
         {
             // Getting the divisible by 2 and 3 application
@@ -25,6 +44,9 @@ namespace DivisibleByTwoAndThreeApp
             Console.WriteLine("Hello " + username + ", Welcome! to my Application."); // Displaying the name of the user
             Console.Write("Now enter a number that you want to know if is divisible by 2 or 3: "); // Getting the number of user 
             int userInputNumber = Int32.Parse(Console.ReadLine()); // Storing the number the user provided.
+
+            // Displaying the result of inputed number.
+            GettingTheDivisibleOfTheNumber(userInputNumber); // method of getting the divisible.
             
             // <~ End of the Getting The Divisible by 2 and 3 App
             Console.ReadLine();
